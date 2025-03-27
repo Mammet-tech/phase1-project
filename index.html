@@ -5,14 +5,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Currency Converter</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
   <header>
+    <img src="./images/Logo.png" id="Logo" alt="Logo">
     <nav>
-      <img src="./images/Logo.png" alt="Logo">
-      <ul>
+      <ul>  
         <li><a href="#">Home</a></li>
         <li><a href="#">Convert</a></li>
         <li><a href="#">Contact</a></li>
@@ -20,8 +20,8 @@
     </nav>
   </header>
   <main>
-    <section>
-      <div>
+    <section id="Home">
+      <div id="HomeText">
         <h1>
           Currency Converter App
         </h1>
@@ -32,12 +32,12 @@
           enjoy a
           seamless experience.
         </p>
-        <button>
+        <button id="Start">
           Lets Start
         </button>
       </div>
       <div>
-        <img src="./images/cover.jpg" alt="Cover">
+        <img src="./images/cover.jpg" id="Cover" alt="Cover">
       </div>
     </section>
     <section>
@@ -48,11 +48,11 @@
         Convert Currency
         <div>
           <label for="Currency"></label>
-          <select name="Currency" id="Currency">            
+          <select name="Currency" id="Currency">
           </select>
           <label for="Amount"></label>
           <input type="number" name="Amount" id="Amount" placeholder="Enter Amount">
-          
+
         </div>
         <div>
           <img src="./images/converticon.png" alt="conversions">
@@ -82,7 +82,7 @@
           <button>
             Submit
           </button>
-        </div>        
+        </div>
     </section>
 
   </main>
