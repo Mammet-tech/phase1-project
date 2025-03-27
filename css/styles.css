@@ -6,6 +6,7 @@
 body{
   font-family: 'Roboto', sans-serif;
   background-color:#6495ED;
+  text-align: center;
 }
 header{
   display: flex;
@@ -39,8 +40,7 @@ nav ul li a{
   font-size: 20px;
 }
 
-#Home{
-  display: flex;
+#Home, #Convert{display: flex;
   justify-content: center;
   align-items: center;  
 }
@@ -48,6 +48,12 @@ nav ul li a{
 #HomeText{  
   width: 500px;
 }
+
+#Home{
+  margin-bottom: 250px;
+
+}
+#H
 
 #Home h1{
   font-size: 50px;
@@ -58,7 +64,7 @@ nav ul li a{
 #Home p{
   font-size: 20px;
   color: #fff;
-  margin-top: 10px;
+  margin-top: 10px; 
 }
 
 #Cover{
@@ -69,8 +75,8 @@ nav ul li a{
 }
 
 #Start{
-  color: black;
-  font-size: 20px;
+  color: #191A1C;
+  font-size: 32px;
   margin-top: 10px;
   background:none;
   border: none;
@@ -79,4 +85,35 @@ nav ul li a{
   display: block;
   margin-left: 100px;
   margin-top: 80px;
+  text-shadow: 2px 2px 2px #191A1C;
+}
+
+#convertIcon{
+ margin: 25px;
+ width: 70px;
+  height: 70px;  
+}
+
+.convert{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  width: 450px;
+  height: 330px;  
+  background: #fff;
+  margin-top: 10px;
+}
+#convertText{
+  margin-top: 20px;
+  font-size: 20px;
+  color: #fff;
+  background: #1FB45D;
+  width: 1020px;
+  height: 100px;
+  padding: 30px;  
+  font-size: 40px;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-left: 410px;
 }

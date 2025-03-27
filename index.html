@@ -12,7 +12,7 @@
   <header>
     <img src="./images/Logo.png" id="Logo" alt="Logo">
     <nav>
-      <ul>  
+      <ul>
         <li><a href="#">Home</a></li>
         <li><a href="#">Convert</a></li>
         <li><a href="#">Contact</a></li>
@@ -44,23 +44,24 @@
       <h1>
         CONVERT
       </h1>
-      <div>
+      <div id="convertText">
         Convert Currency
-        <div>
+      </div>
+
+      <div id="Convert">
+
+        <div class="convert">
           <label for="Currency"></label>
-          <select name="Currency" id="Currency">
-          </select>
+          <select name="Currency" id="Currency"></select>
           <label for="Amount"></label>
           <input type="number" name="Amount" id="Amount" placeholder="Enter Amount">
-
         </div>
         <div>
-          <img src="./images/converticon.png" alt="conversions">
+          <img src="./images/converticon.png" id="convertIcon" alt="conversions">
         </div>
-        <div>
+        <div class="convert">
           <label for="Currency"></label>
-          <select name="Currency1" id="Currency">
-          </select>
+          <select name="Currency1" id="Currency1"> </select>
           <label for="Amount"></label>
           <input type="number" name="Amount1" id="Amount" placeholder="Enter Amount">
         </div>
@@ -70,18 +71,27 @@
       <h1>
         CONTACT
       </h1>
+
       <div>
         Contact Us
-        <div>
-          <label for="Name">Name:</label>
-          <input type="text" name="Name" id="Name" placeholder="Enter Name">
-          <label for="Email">Email:</label>
-          <input type="email" name="Email" id="Email" placeholder="Enter Email">
-          <label for="Message"></label>
-          <textarea name="Message" id="Message" placeholder="Enter Message">Message:</textarea>
-          <button>
-            Submit
-          </button>
+        <div id="Contact">
+          <div>
+            <label for="Name">Name:</label>
+            <input type="text" name="Name" id="Name" placeholder="Enter Name">
+          </div>
+          <div>
+            <label for="Email">Email:</label>
+            <input type="email" name="Email" id="Email" placeholder="Enter Email">
+          </div>
+          <div>
+            <label for="Message">Message:</label>
+            <textarea name="Message" id="Message" placeholder="Enter Message"></textarea>
+          </div>
+          <div>
+            <button>
+              Submit
+            </button>
+          </div>
         </div>
     </section>
 
