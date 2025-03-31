@@ -20,16 +20,16 @@ header{
 
 #Logo{
   width: 190px;
- height: 40px;  
+ height: auto;  
 }
 nav ul{
   list-style: none;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 80px;
-
+  height: 60px;
 }
+
 nav ul li{
   margin: 0 100px;
 
@@ -38,9 +38,14 @@ nav ul li a{
   text-decoration: none;
   color: #fff;
   font-size: 20px;
+  transition: color 0.3s;
+}
+nav ul li a:hover{
+  color: #1E3A5F;
 }
 
-#Home, #Convert{display: flex;
+#Home, #Convert{
+  display: flex;
   justify-content: center;
   align-items: center;  
 }
@@ -49,11 +54,8 @@ nav ul li a{
   width: 500px;
 }
 
-#Home{
-  margin-bottom: 200px;
-
-}
-#H
+#Home{ 
+   margin-bottom: 200px;}
 
 #Home h1{
   font-size: 50px;
@@ -150,9 +152,83 @@ nav ul li a{
 html{
   scroll-behavior: smooth;
 }
+
 #ContactSection{ 
-   
-  margin-top: 100px;
-  
+  margin-bottom: 100px;   
+  margin-top: 100px;  
 }
+footer{
+  background: #F4F4F4;
+  color: #222;  
+  font-size: 16px;
+  padding: 30px 20px;
+  text-align: center; 
+}
+
+.footer-container{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 10px;
+}
+
+.footer-links, 
+.footer-contact,
+.footer-social{
+  flex: 1;
+  min-width: 250px;
+  margin: 10px 20px;
+}
+
+.footer-links h3,
+.footer-contact h3,
+.footer-social h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-transform: uppercase;}
+
+  .footer-links ul {
+  list-style: none;    
+}
+
+.footer-links ul li {
+  margin: 8px 0;
+}
+
+.footer-links ul li a {
+  color: #222;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links ul li a:hover{
+  color: #6495ED;
+}
+
+.footer-social a {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.footer-social img{
+  width: 30px;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.footer-social img:hover{
+   transform: scale(1.2);
+}
+
+.footer-bottom {
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+
+
+
+
 
