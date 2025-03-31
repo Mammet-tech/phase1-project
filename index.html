@@ -14,8 +14,8 @@
     <nav>
       <ul>
         <li><a href="#">Home</a></li>
-        <li><a href="#">Convert</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#ConvertSection">Convert</a></li>
+        <li><a href="#ContactSection">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -40,7 +40,7 @@
         <img src="./images/cover.jpg" id="Cover" alt="Cover">
       </div>
     </section>
-    <section>
+    <section id="ConvertSection">
       <h1>
         CONVERT
       </h1>
@@ -67,24 +67,26 @@
         </div>
       </div>
     </section>
-    <section>
+    <section id="ContactSection">
       <h1>
         CONTACT
       </h1>
 
-      <div>
-        Contact Us
+      <div id="container">       
         <div id="Contact">
           <div>
             <label for="Name">Name:</label>
+            <br>
             <input type="text" name="Name" id="Name" placeholder="Enter Name">
           </div>
           <div>
             <label for="Email">Email:</label>
+            <br>
             <input type="email" name="Email" id="Email" placeholder="Enter Email">
           </div>
           <div>
             <label for="Message">Message:</label>
+            <br>
             <textarea name="Message" id="Message" placeholder="Enter Message"></textarea>
           </div>
           <div>

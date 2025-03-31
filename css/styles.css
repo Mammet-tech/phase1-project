@@ -50,7 +50,7 @@ nav ul li a{
 }
 
 #Home{
-  margin-bottom: 250px;
+  margin-bottom: 200px;
 
 }
 #H
@@ -117,3 +117,42 @@ nav ul li a{
   margin-top: 20px;
   margin-left: 410px;
 }
+#container{
+  background: #fff;
+  width: 600px;
+  height: 350px;
+  margin: 0 auto;   
+  margin-top: 10px;
+}
+
+
+#Contact label {
+  font-size: 18px;
+  font-weight: bold;
+ 
+}
+
+#Contact input,
+#Contact textarea {
+  font-size: 16px;
+  padding: 10px; 
+  margin: 10px 0;
+  border: none;
+}
+#Contact button{
+  background: #1FB45D;
+  color: #fff;
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+html{
+  scroll-behavior: smooth;
+}
+#ContactSection{ 
+   
+  margin-top: 100px;
+  
+}
+
