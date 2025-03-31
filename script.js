@@ -50,4 +50,15 @@ document.addEventListener("DOMContentLoaded", () => {
   fromCurrency.addEventListener("change", convertCurrency);
   toCurrency.addEventListener("change", convertCurrency);
   amountInput.addEventListener("input", convertCurrency);
+
+
+  // Reser button
+  document.getElementById("resetBtn").addEventListener("click", () => {
+    fromCurrency.value = "";
+    toCurrency.value = "";
+    amountInput.value = "";
+    result.value = "";
+  });
+
 });
+ 

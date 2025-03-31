@@ -228,6 +228,47 @@ footer{
 }
 
 
+/* Responsive Styles */
+@media(max-width: 768px) {
+ header{
+  flex-direction: column;
+  align-items: center; 
+  gap: 20px;
+}
+nav ul{
+  flex-direction: column;
+  padding: 10px 0;
+}
+nav ul li{
+  margin: 10px 0;
+}
+#Home,
+#Convert,
+footer .footer-container{
+  flex-direction: column;
+  text-align: center;
+}
+ #Cover {
+    width: 90%;
+    height: auto;
+    margin: 20px 0;
+  }
+   #convertText {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+.convert {
+    width: 90%;
+    margin: 10px 0;
+  }
+  #container {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+}
+
 
 
 
