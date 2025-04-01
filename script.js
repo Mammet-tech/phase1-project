@@ -41,10 +41,40 @@ document.addEventListener("DOMContentLoaded", () => {
     )
       .then((response) => response.json())
       .then((data) => {
-        result.value = data.rates[to].toFixed(2); // Automatically update result
+        result.value = data.rates[to].toFixed(2); 
+        const conversion = {
+          from: from,
+          to: to,
+          amount: amount,
+          result: data.rates[to].toFixed(2),
+        };
+        let conversionHistory = JSON.parse(localStorage.getItem("conversionHistory")) || [];
+        conversionHistory.unshift(conversion);
+
+        if (conversionHistory.length > 5) {
+          conversionHistory.pop();
+        }
+
+        localStorage.setItem("conversionHistory", JSON.stringify(conversionHistory));
+        displayConversionHistory(conversionHistory);
       })
       .catch((error) => console.error("Error fetching exchange rate:", error));
   }
+
+  function displayConversionHistory(conversionHistory) {
+    const historyContainer = document.getElementById("history");
+    historyContainer.innerHTML = "";
+
+    conversionHistory.forEach((conversion) => {
+      const historyItem = document.createElement("div");
+      historyItem.textContent = `${conversion.amount} ${conversion.from} = ${conversion.result} ${conversion.to}`;
+      historyContainer.appendChild(historyItem);
+    });
+  }
+  // Load conversion history on page load
+  const conversionHistory = JSON.parse(localStorage.getItem("conversionHistory")) || [];
+  displayConversionHistory(conversionHistory);
+ 
 
   // Event listeners
   fromCurrency.addEventListener("change", convertCurrency);
@@ -52,12 +82,16 @@ document.addEventListener("DOMContentLoaded", () => {
   amountInput.addEventListener("input", convertCurrency);
 
 
-  // Reser button
+  // Reset button
   document.getElementById("resetBtn").addEventListener("click", () => {
     fromCurrency.value = "";
     toCurrency.value = "";
     amountInput.value = "";
     result.value = "";
+
+    localStorage.removeItem("conversionHistory");
+    const historyContainer = document.getElementById("history");
+    historyContainer.innerHTML = "";
   });
 
 });
