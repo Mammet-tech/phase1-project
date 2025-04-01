@@ -41,21 +41,25 @@ document.addEventListener("DOMContentLoaded", () => {
     )
       .then((response) => response.json())
       .then((data) => {
-        result.value = data.rates[to].toFixed(2); 
+        result.value = data.rates[to].toFixed(2);
         const conversion = {
           from: from,
           to: to,
           amount: amount,
           result: data.rates[to].toFixed(2),
         };
-        let conversionHistory = JSON.parse(localStorage.getItem("conversionHistory")) || [];
+        let conversionHistory =
+          JSON.parse(localStorage.getItem("conversionHistory")) || [];
         conversionHistory.unshift(conversion);
 
         if (conversionHistory.length > 5) {
           conversionHistory.pop();
         }
 
-        localStorage.setItem("conversionHistory", JSON.stringify(conversionHistory));
+        localStorage.setItem(
+          "conversionHistory",
+          JSON.stringify(conversionHistory)
+        );
         displayConversionHistory(conversionHistory);
       })
       .catch((error) => console.error("Error fetching exchange rate:", error));
@@ -71,16 +75,16 @@ document.addEventListener("DOMContentLoaded", () => {
       historyContainer.appendChild(historyItem);
     });
   }
-  // Load conversion history on page load
-  const conversionHistory = JSON.parse(localStorage.getItem("conversionHistory")) || [];
-  displayConversionHistory(conversionHistory);
- 
 
-  // Event listeners
+  // Load conversion history on page load
+  const conversionHistory =
+    JSON.parse(localStorage.getItem("conversionHistory")) || [];
+  displayConversionHistory(conversionHistory);
+
+  // Event listeners for currency conversion
   fromCurrency.addEventListener("change", convertCurrency);
   toCurrency.addEventListener("change", convertCurrency);
   amountInput.addEventListener("input", convertCurrency);
-
 
   // Reset button
   document.getElementById("resetBtn").addEventListener("click", () => {
@@ -94,5 +98,19 @@ document.addEventListener("DOMContentLoaded", () => {
     historyContainer.innerHTML = "";
   });
 
+  // Submit form 
+  const submitBtn = document.getElementById("submitBtn");
+  submitBtn.addEventListener("click", (e) => {
+    e.preventDefault();     
+    alert("Message sent successfully");
+
+    // Clear input fields
+    const nameInput = document.getElementById("Name");
+    const emailInput = document.getElementById("Email");
+    const messageInput = document.getElementById("Message");
+
+    nameInput.value = "";
+    emailInput.value = "";
+    messageInput.value = "";
+  });
 });
- 
